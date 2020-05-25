@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title></title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+
+    <section id="section-container">
+
+        <section id="main-section">
+
+            <div id="heading">
+
+                <div id="he">Completed-Work</div> 
+            </div>
+        
+
+
+    <ul>
+
+        <!-- adding data form ejs -->
+
+        <% for (let i of completed) { %> 
+
+       
+
+
+          <li>
+           
+            
+
+  <div class="note"><div class="d-content"><input type="checkbox"  class="input-check"><div class="co-name"><%= i.name %></div></div> <div><button class="cate"><%= i.category %></button><a href="/delete-completed/?id=<%= i._id %>"><i class="fas fa-window-close"></i></i></a></div></div>
+            <div class="dat">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <!-- <%= i.duedate %> -->
+            </div>
+
+     </li>
+
+     <% } %>
+
+
+      </ul>
+
+      <div id="for-button">
+
+        
+
+        <button class="bt"><a href="http://localhost:8000/" class="tags">Go to add Task</a></button>
+       
+
+    </div>
+      </section>
+
+      </section>
+
+   
+    
+</body>
+</html>

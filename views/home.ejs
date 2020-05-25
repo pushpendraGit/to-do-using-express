@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- this is link for font awsomr cdn -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <section id="section-container">
+
+        <section id="main-section">
+
+            <div id="heading">
+
+                <div id="he">ToDo App</div> 
+            </div>
+            <!-- for discription -->
+            <div id = "description">
+
+                <div id="discription-name">
+
+                    Discription
+
+                </div>
+
+                <form action="/create-contact" method="POST">
+                   
+                    <input type="text" id="fname" name="name" placeholder="Enter what is in your mind"><br>
+
+                    <div id="selec">
+
+                    <div id="category-area">
+
+                    <label for="category" id="c-lebal">catogary</label>
+
+                    <select name="category" id="category">
+                        <option>Choose A Category</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Office">Office</option>
+                      </select>
+                    </div>
+                    <div id="date">
+                      <label for="birthday" id="bir">Due Dates</label>
+                      <input type="date" id="birthday" name="duedate">
+
+                    </div>
+
+                </div>
+
+                <div id="for-button">
+
+                    <button type="submit" class="btn">Add Task</button>
+
+                    <button class="bt"><a href="/completed" class="tags">Go To Completed</a></button>
+                   
+
+                </div>
+  
+                    
+                  </form>
+
+                  <div id="list-container">
+
+                    <div id="empty-error">Current List</div>
+                    <form action="">
+                      <ul>
+
+                        <!-- adding data form ejs -->
+
+                        <% for (let i of contact_list) { %> 
+
+                       
+
+
+                          <li>
+                           
+                            
+           
+                  <div class="note"><div class="d-content"><input type="checkbox"  class="input-check"><div class="co-name"><%= i.name %></div></div><div><button class="cate"><%= i.category %></button><a href="/delete-contect/?id=<%= i._id %>" class="icon"><i class="far fa-plus-square"></i></a></div></div>
+                            <div class="dat">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <%= i.duedate %>
+                            </div>
+
+                     </li>
+
+                     <% } %>
+
+
+                      </ul>
+
+                      
+
+                      </form>
+
+                  </div>
+
+                
+
+
+                  
+
+
+                
+
+                    
+                      
+
+                
+
+                 
+
+                 
+
+                  
+
+
+            </div>
+
+        </section>
+
+    </section>
+<script src="js/list.js"></script>
+</body>
+</html>

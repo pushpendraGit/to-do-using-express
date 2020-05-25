@@ -1,0 +1,476 @@
+body{
+
+    margin: 0;
+
+    padding: 0;
+}
+
+#section-container{
+
+    border: 3px solid black;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+
+  
+}
+
+#main-section{
+
+    width: 80%;
+
+    border: 2px solid red;
+
+   
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17),
+  url(https://res.cloudinary.com/css-tricks/image/fetch/w_1200,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2019/11/shapes-and-stuff.png);
+   
+}
+
+#heading{
+
+    width: 100%;
+
+    height: 60px;
+
+  
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17)
+
+}
+
+  /* this is for heading text */
+
+  #he{
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+    color: white;
+
+   
+
+
+  }
+
+  /* this is for discription */
+
+  #description{
+
+    width: 100%;
+
+    height: 70px;
+
+    border: 3px solid gray;
+  }
+
+  #discription-name{
+
+    font-size: 25px;
+    text-transform: uppercase;
+
+    color: white;
+
+  }
+
+  #fname{
+
+    width: 99%;
+
+    height: 40px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+  }
+
+
+  /* this is for selectiong area */
+
+  #selec{
+
+    width: 100%;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  #category-area{
+
+    width: 50%;
+
+   border-right: 3px solid tomato;
+
+
+  
+
+    
+  }
+
+  #c-lebal{
+
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    height: 30px;
+   display: block;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: white;
+
+   
+    border-right: 2px solid salmon;
+  }
+
+  #category{
+
+  
+    height: 50px;
+
+    width: 100%;
+
+    font-size: 20px;
+
+  
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid sienna;
+    border-right: 2px solid salmon;
+  }
+
+  #bir{
+
+    font-size: 20px;
+    font-weight: 600;
+ 
+    height: 30px;
+
+    color: white;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+  }
+
+  #date{
+
+    width: 49%;
+
+  
+  }
+
+
+  #birthday{
+
+    height: 47px;
+
+    width: 98%;
+    font-size: 15px;
+}
+
+
+#for-button{
+
+  height: 70px;
+
+  width: 100%;
+/* 
+  border: 2px solid green; */
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+#empty-error{
+
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+
+/* styling buttion */
+
+
+
+.btn{
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.btn:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn:active {
+  color: #000
+}
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+.btn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+.remo{
+
+  width: 150px;
+  height: 50px;
+  background-color: red;
+}
+
+#completed,#list-container{
+
+    width: 100%;
+    transition: all 0.5s ease-in-out ;
+       max-height: 50vh;
+   
+    border-bottom: 2px solid lightgray;
+}
+
+ul{
+  /* list-style: none;
+
+  margin: 0;
+  padding: 0; */
+
+  transition: all 0.5s ease-in-out;
+    perspective: 1000px;
+    min-height: 20px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    transition: all 0.5s ease-in-out ;
+    overflow: scroll;
+    max-height: 50vh;
+
+    background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17)
+}
+
+ul li{
+
+  width: 100%;
+
+  margin-top: 15px;
+
+
+
+  border: 3px solid darkorange;
+
+  background-color:beige;
+
+  display: flex;
+  flex-direction: column;
+
+  /* transform: rotateY(-90deg); */
+    opacity: 1;
+    transition : all 0.4s cubic-bezier(.36,-0.64,.34,1.76);
+  
+  
+    display: flex;
+  
+    font-size: 25px;
+
+    box-sizing: border-box;
+    
+}
+
+.note{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+  justify-items: right;
+}
+
+.d-content{
+
+  display: flex;
+}
+
+/* designing for check-box */
+
+.input-check{
+  height: 20px;
+  width: 20px;
+}
+
+/* this is for description content */
+
+.d-content{
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dat{
+
+  margin-left: 30px;
+}
+
+
+/* thos is for adding the categy for list item */
+
+.cate{
+
+ margin-left:60px;
+
+ 
+
+ height: 30px;
+ width: 100px;
+ 
+}
+.far{
+
+  background-color:snow;
+
+ 
+
+}
+
+.icon{
+  font-size: 30px;
+
+  margin-top: 10px;
+
+  
+color:red;
+margin-left: 10px;
+
+  margin-right: 10px;
+  
+}
+
+
+/* in this section i am designing sompleted buttion animation */
+
+.bt {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+
+
+  background-image: linear-gradient(0deg,#ff8a00,#e52e71);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin-left: 25px;
+}
+
+.bt span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bt span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.bt:hover span {
+  padding-right: 25px;
+}
+
+.bt:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* making responcive */
+
+@media screen and (max-width: 600px) {
+ 
+
+  #main-section{
+
+    width: 100%;
+}
+
+}
+
+.tags{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
